@@ -34,8 +34,8 @@ public class GameBean {
 	 * @throws IOException
 	 */
 	public void abreArquivoLog() throws IOException {
-		//File file = new File("//home//temp//games.log");
-		File file = new File("c://temp//games.log");
+		File file = new File("//home//luisgustavo//temp//game.log");
+		//File file = new File("c://temp//games.log");
 		getLinhasArquivo(file);
 	}
 	
@@ -51,7 +51,7 @@ public class GameBean {
 			linhas = new ArrayList<>();
 			String linha = "";
 			while ((linha = leitor.readLine()) != null) {
-				linhas.add(linha);
+				linhas.add(linha.trim());
 			}
 		}
 		return linhas;

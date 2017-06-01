@@ -20,7 +20,7 @@ public class RetornaPlayer {
 	public boolean verificaExistenciaPlayer(List<Player> players, Player player) {
 		boolean existe = false;
 		for (Player p : players) {
-			if (player.nome.equals(p.nome)) {
+			if ((player.id == p.id) && (player.nome.equals(p.nome))) {
 				existe = true;
 			}
 		}
