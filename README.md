@@ -30,7 +30,7 @@ Para a construção da API de consumo, foi utilizado SprinMVC e SpringBoot.
 ```
 
 
-- 5 - Para visualizar o resultado através da API de consulta, acesse o navegador ou alguma ferramenta para consumo de APIs como é o caso do PostMan, informando o link "http://localhost:8080/games".
+- 5 - Para visualizar o resultado através da API de consulta, acesse o navegador ou alguma ferramenta para consumo de APIs como é o caso do PostMan, informando o link "http://localhost:8080/games". (Caso a porta 8080 já esteja sendo utilizada em seu computador, acesse o arquivo application.properties que está localizado na pasta src/main/properties e altere a porta padrão.
 
 
 
