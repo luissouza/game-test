@@ -7,19 +7,11 @@ import java.util.Map;
 
 public class GameEntityJSON {
 	
-	public transient int game;
-	public int total_kills;
-	public List<String> players;
-
-	Map<String, Integer> kills = new HashMap<>();
 	
+	private int total_kills;
+	private List<String> players;
+	private Map<String, Integer> kills = new HashMap<>();
 	
-	public int getGame() {
-		return game;
-	}
-	public void setGame(int game) {
-		this.game = game;
-	}
 	public int getTotal_kills() {
 		return total_kills;
 	}

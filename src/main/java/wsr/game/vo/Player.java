@@ -2,8 +2,8 @@ package wsr.game.vo;
 
 public class Player {
 
-	public int id;
-	public String nome;
+	private int id;
+	private String nome;
 	private PlayerKillsEntity playerKills;
 
 	public String getNome() {

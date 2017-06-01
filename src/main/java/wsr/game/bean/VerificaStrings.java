@@ -45,11 +45,11 @@ public class VerificaStrings {
 	}
 
 	public void verificaKillsPorPlayer(String linha, List<Player> players) {
-
-		final Matcher linhaKill = Pattern.compile("([0-9]*[0-9]:[0-5][0-9])" + "\\s(" + StringsGame.KILL + ":)(.*?)").matcher(linha);
+		
+		Matcher linhaKill = Pattern.compile("([0-9]*[0-9]:[0-5][0-9])" + "\\s(" + StringsGame.KILL + ":)(.*?)").matcher(linha);
 		linhaKill.matches();
-		final String kill = linhaKill.group(3).trim();
-		final Matcher matcher = Pattern.compile("([0-9]*)\\s([0-9]*)\\s([0-9]*)(.*)").matcher(kill);
+		String kill = linhaKill.group(3).trim();
+		Matcher matcher = Pattern.compile("([0-9]*)\\s([0-9]*)\\s([0-9]*)(.*)").matcher(kill);
 		if (!matcher.matches()) {
 			return;
 		}

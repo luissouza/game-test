@@ -35,7 +35,7 @@ public class GameBean {
 	 */
 	public void abreArquivoLog() throws IOException {
 		File file = new File("//home//luisgustavo//temp//game.log");
-		//File file = new File("c://temp//games.log");
+		//File file = new File("c://temp//game.log");
 		getLinhasArquivo(file);
 	}
 	
@@ -97,7 +97,6 @@ public class GameBean {
 		}
 		
 		montaJSON(listGames);
-		
 	}
 	
 	public void montaJSON(List<GameEntity> listGames) {
@@ -105,12 +104,10 @@ public class GameBean {
 		for (GameEntity g : listGames) {
 			String gameNumber = "game_" + x++;
 			GameEntityJSON gameJSON = new GameEntityJSON();
-			gameJSON.setGame(x);
 			gameJSON.setTotal_kills(g.getKills());
 
 			int i = 0;
 			for (Player p : g.getPlayers()) {
-				
 				gameJSON.getPlayers().add(g.getPlayers().get(i).getNome());
 				gameJSON.getKills().put(g.getPlayers().get(i).getNome(), g.getPlayers().get(i).getPlayerKills().getKill());
 				i++;
@@ -127,7 +124,6 @@ public class GameBean {
 		    System.out.println(gsonBuilder.toJson(object));
 		
 		}
-		
 	}
 
 	public List<GameEntityJSON> getListGamesJSON() {

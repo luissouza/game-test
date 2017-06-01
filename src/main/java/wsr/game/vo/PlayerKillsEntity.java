@@ -4,7 +4,7 @@ package wsr.game.vo;
 public class PlayerKillsEntity {
 	
 	
-	public int kill = 0;
+	private int kill = 0;
 	
 	public void addKill() {
 		this.kill++;

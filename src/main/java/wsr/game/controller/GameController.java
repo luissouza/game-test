@@ -20,7 +20,6 @@ public class GameController {
 	public ResponseEntity<Map<String, GameEntityJSON>> findByAll() {
 		
 		GameBean game = new GameBean();
-		
 		try {
 			game.abreArquivoLog();
 			game.separarGames();    
@@ -32,7 +31,6 @@ public class GameController {
 			
 			HttpHeaders header = new HttpHeaders();
 			header.set("type", "games");
-				
 			return new ResponseEntity<Map<String, GameEntityJSON>>(game.getMapJson(), header, HttpStatus.OK);
 			
 		} catch (Exception e) {
